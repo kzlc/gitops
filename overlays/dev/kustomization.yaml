@@ -9,3 +9,5 @@ images:
 patchesStrategicMerge:
 - api/merge/certificate.yaml
 - api/merge/ingress.yaml
+- frontend/merge/certificate.yaml
+- frontend/merge/ingress.yaml
