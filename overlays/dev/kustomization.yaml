@@ -3,6 +3,9 @@ kind: Kustomization
 resources:
 - ../../base
 images:
+- name: adhp/zdv-frontend
+  newName: adhp/zdv-frontend
+  newTag: dev-bee3155
 - name: denartcc/api
   newName: adhp/api
   newTag: dev-de58bad
