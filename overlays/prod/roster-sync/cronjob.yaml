@@ -125,19 +125,19 @@ spec:
                   *) ctr="none";;
                 esac
 
-                controllertype="none"
-                if [[ "$visitor" == "1" ]]; then
-                  controllertype="visitor"
-                elif [[ "$visitor" == "0" ]]; then
-                  controllertype="home"
-                fi
-
                 status="active"
                 if [[ "$status" -ne "0" ]]; then
                   status="none"
                 fi
                 if [[ "$loa" -ne "0" ]]; then
                   status="loa"
+                fi
+                
+                controllertype="none"
+                if [[ "$visitor" == "1" ]]; then
+                  controllertype="visitor"
+                elif [[ "$visitor" == "0" && "$status" == "active" ]]; then
+                  controllertype="home"
                 fi
 
                 mysql -u$MYSQL_USER -p$MYSQL_PWD -h$MYSQL_HOST zdvdev -e "INSERT INTO users (c_id, first_name, last_name, email, operating_initials, rating_id, discord_id, status, gnd_certification, major_gnd_certification, lcl_certification, major_lcl_certification, app_certification, major_app_certification, ctr_certification, created_at, updated_at) VALUES (\"$id\", \"$firstname\", \"$lastname\", \"$email\", \"$initials\", \"$rating_id\", \"$discord\", \"$status\", \"$gnd\", \"$gnd_major\", \"$twr\", \"$twr_major\", \"$app\", \"$app_major\", \"$ctr\", \"$created_at\", \"$updated_at\")"
