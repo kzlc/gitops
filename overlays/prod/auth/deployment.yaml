@@ -25,13 +25,7 @@ spec:
       containers:
       - envFrom:
         - secretRef:
-            name: auth-env-db
-            optional: false
-        - secretRef:
-            name: auth-env-vatsim
-            optional: false
-        - secretRef:
-            name: auth-env-jwks
+            name: auth-secrets
             optional: false
         image: vzanartcc/auth:debug
         imagePullPolicy: Always
