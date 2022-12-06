@@ -69,8 +69,6 @@ spec:
           timeoutSeconds: 1
         command: ["/app/api"]
         args:
-          - -l
-          - debug
           - server
           - --config
           - /etc/zdv-api/config.yaml
