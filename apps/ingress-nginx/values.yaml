@@ -3,7 +3,7 @@ ingress-nginx:
     kind: DaemonSet
     service:
       externalTrafficPolicy: Local
-      ipFamilyPolicy: PreferDualStack
+      ipFamilyPolicy: RequireDualStack
       ipFamilies:
       - IPv4
       - IPv6
