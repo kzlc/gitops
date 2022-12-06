@@ -9,8 +9,11 @@ resources:
 - auth/service.yaml
 - mysql-backup/cronjob.yaml
 - bot/deployment.yaml
-- roster-sync/cronjob.yaml ### This needs to be removed once we "cut over"
+- roster-sync/cronjob.yaml
 images:
+- name: adhp/zdv-frontend
+  newName: adhp/frontend
+  newTag: zdv-main-7860247
 - name: denartcc/api
   newName: adhp/api
   newTag: main-93ac607
