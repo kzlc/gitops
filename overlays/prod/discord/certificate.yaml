@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: auth-denartcc-org-tls
+  name: discord-denartcc-org-tls
 spec:
   dnsNames:
-  - auth.denartcc.org
+  - discord.denartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  secretName: tls-auth-denartcc-org
+  secretName: tls-discord-denartcc-org

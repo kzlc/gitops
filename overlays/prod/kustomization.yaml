@@ -7,6 +7,10 @@ resources:
 - auth/deployment.yaml
 - auth/ingress.yaml
 - auth/service.yaml
+- discord/certificate.yaml
+- discord/deployment.yaml
+- discord/ingress.yaml
+- discord/service.yaml
 - mysql-backup/cronjob.yaml
 - bot/deployment.yaml
 - roster-sync/cronjob.yaml
