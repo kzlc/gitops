@@ -67,3 +67,13 @@ Then edit `argocd-secret` Secret:
 ```
 
 Replace `$GITHUB_CLIENT_ID` and `$GITHUB_CLIENT_SECRET` with your GitHub OAuth App credentials.
+
+## Cert-Manager configs
+
+You need to apply the Cloudflare API Token secret to the `cert-manager` namespace:
+
+```bash
+kubectl create secret generic cloudflare-api-token --from-literal=api-token=$CLOUDFLARE_API_TOKEN -n cert-manager
+```
+
+Replace `$CLOUDFLARE_API_TOKEN` with your Cloudflare API Token.
