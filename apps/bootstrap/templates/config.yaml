@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps/config
+    path: apps/configs
     repoURL: https://github.com/kzdv/gitops
     targetRevision: HEAD
   syncPolicy:
