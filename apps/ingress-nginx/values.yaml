@@ -4,3 +4,6 @@ ingress-nginx:
     service:
       externalTrafficPolicy: Local
       ipFamilyPolicy: PreferDualStack
+      ipFamilies:
+      - IPv4
+      - IPv6
