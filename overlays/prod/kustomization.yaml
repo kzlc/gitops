@@ -9,6 +9,7 @@ resources:
 - auth/service.yaml
 - mysql-backup/cronjob.yaml
 - bot/deployment.yaml
+- roster-sync/cronjob.yaml ### This needs to be removed once we "cut over"
 images:
 - name: denartcc/api
   newName: adhp/api
