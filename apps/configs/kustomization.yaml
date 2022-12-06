@@ -4,4 +4,5 @@ metadata:
   name: configs
 resources:
 - base/argocd-ingress.yaml
+- base/argocd-rbac-cm.yaml
 - base/cert-manager-ClusterIssuer.yaml
