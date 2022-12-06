@@ -27,6 +27,9 @@ spec:
         - secretRef:
             name: auth-secrets
             optional: false
+        env:
+        - name: VATSIM_USER_INFO_FORMAT
+          value: "vatsim"
         image: vzanartcc/auth:debug
         imagePullPolicy: Always
         livenessProbe:
