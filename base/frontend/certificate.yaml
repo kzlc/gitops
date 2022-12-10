@@ -5,6 +5,8 @@ metadata:
 spec:
   dnsNames:
   - www.denartcc.org
+  - denartcc.org
+  - new.denartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
