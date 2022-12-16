@@ -24,30 +24,10 @@ spec:
     spec:
       containers:
       - env:
-        - name: DISCORD_TOKEN
+        - name: BOT_CONFIG
           valueFrom:
             secretKeyRef:
-              key: bot-token
-              name: bot-secrets
-        - name: GITHUB_TOKEN
-          valueFrom:
-            secretKeyRef:
-              key: github-token
-              name: bot-secrets
-        - name: DISCORD_APPID
-          valueFrom:
-            secretKeyRef:
-              key: discord-appid
-              name: bot-secrets
-        - name: DISCORD_GUILD
-          valueFrom:
-            secretKeyRef:
-              key: discord-guild
-              name: bot-secrets
-        - name: FACILITY_API
-          valueFrom:
-            secretKeyRef:
-              key: api-url
+              key: bot-config
               name: bot-secrets
         image: denartcc/bot:main
         imagePullPolicy: Always
