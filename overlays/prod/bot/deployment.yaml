@@ -34,7 +34,22 @@ spec:
             secretKeyRef:
               key: github-token
               name: bot-secrets
-        image: docker.io/denartcc/bot:main
+        - name: DISCORD_APPID
+          valueFrom:
+            secretKeyRef:
+              key: github-token
+              name: discord-appid
+        - name: DISCORD_GUILD
+          valueFrom:
+            secretKeyRef:
+              key: github-token
+              name: discord-guild
+        - name: FACILITY_API
+          valueFrom:
+            secretKeyRef:
+              key: github-token
+              name: api-url
+        image: denartcc/bot:main
         imagePullPolicy: Always
         name: bot
         resources:
