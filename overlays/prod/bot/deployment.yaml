@@ -37,18 +37,18 @@ spec:
         - name: DISCORD_APPID
           valueFrom:
             secretKeyRef:
-              key: github-token
-              name: discord-appid
+              key: discord-appid
+              name: bot-secrets
         - name: DISCORD_GUILD
           valueFrom:
             secretKeyRef:
-              key: github-token
-              name: discord-guild
+              key: discord-guild
+              name: bot-secrets
         - name: FACILITY_API
           valueFrom:
             secretKeyRef:
-              key: github-token
-              name: api-url
+              key: api-url
+              name: bot-secrets
         image: denartcc/bot:main
         imagePullPolicy: Always
         name: bot
