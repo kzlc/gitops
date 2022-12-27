@@ -34,8 +34,8 @@ spec:
         name: bot
         resources:
           limits:
-            cpu: 100m
-            memory: 256Mi
+            cpu: 400m
+            memory: 384Mi
           requests:
             cpu: 100m
             memory: 100Mi
