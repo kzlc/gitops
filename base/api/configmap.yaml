@@ -93,7 +93,7 @@ items:
       vatusa:
         facility: "ZDV"
         api_key: "{{.VATUSA_API_KEY | default "zdv"}}"
-        test_mode: true
+        test_mode: {{.VATUSA_TEST_MODE | default false }}
   kind: ConfigMap
   metadata:
     name: api-config
