@@ -20,7 +20,7 @@ images:
   newTag: zdv-v1.2.2-3685db4
 - name: denartcc/api
   newName: adhp/api
-  newTag: main-ed7e22f
+  newTag: main-d698318
 - name: denartcc/bot
   newName: adhp/bot
   newTag: main-1ec0518
