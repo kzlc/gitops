@@ -1,0 +1,48 @@
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: Logging
+metadata:
+  name: logging
+  namespace: logging
+spec:
+  fluentd: {}
+  fluentbit: {}
+  controlNamespace: logging
+  watchNamespaces: ['zdv','ingress-nginx']
+---
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: ClusterOutput
+metadata:
+  name: s3-output
+  namespace: logging
+spec:
+  s3:
+    aws_key_id:
+      valueFrom:
+        secretKeyRef:
+          name: logging-s3
+          key: awsAccessKeyId
+    aws_sec_key:
+      valueFrom:
+        secretKeyRef:
+          name: logging-s3
+          key: awsSecretAccessKey
+    s3_bucket: kzdv-backups
+    s3_endpoint: https://sfo3.digitaloceanspaces.com
+    s3_region: us-east-1
+    path: logs/${tag}/%Y/%m/%d/
+    buffer:
+      timekey: 60m
+      timekey_wait: 30s
+      timekey_use_utc: true
+---
+apiVersion: logging.banzaicloud.io/v1beta1
+kind: ClusterFlow
+metadata:
+  name: s3-flow
+  namespace: logging
+spec:
+  filters:
+    - tag_normalizer:
+        format: ${namespace_name}.${pod_name}.${container_name}
+  globalOutputRefs:
+    - s3-output
