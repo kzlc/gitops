@@ -41,8 +41,5 @@ metadata:
   name: s3-flow
   namespace: logging
 spec:
-  filters:
-    - tag_normalizer:
-        format: ${namespace_name}.${pod_name}.${container_name}
   globalOutputRefs:
     - s3-output
