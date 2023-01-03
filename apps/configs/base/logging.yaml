@@ -51,6 +51,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: log-cleanup
+  namespace: logging
 spec:
   concurrencyPolicy: Allow
   failedJobsHistoryLimit: 1
