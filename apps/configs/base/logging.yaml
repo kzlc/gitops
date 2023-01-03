@@ -29,7 +29,7 @@ spec:
     s3_bucket: kzdv-backups
     s3_endpoint: https://sfo3.digitaloceanspaces.com
     s3_region: us-east-1
-    path: logs/${tag}/%Y/%m/%d/
+    path: logs/%Y-%m-%d/${tag}
     buffer:
       timekey: 60m
       timekey_wait: 30s
@@ -41,5 +41,8 @@ metadata:
   name: s3-flow
   namespace: logging
 spec:
+  filters:
+    - tag_normaliser:
+        format: ${namespace_name}.${pod_name}.${container_name}
   globalOutputRefs:
     - s3-output
