@@ -29,7 +29,7 @@ spec:
     s3_bucket: kzdv-backups
     s3_endpoint: https://sfo3.digitaloceanspaces.com
     s3_region: us-east-1
-    path: logs/%Y-%m-%d/${tag}
+    path: logs/%Y-%m-%d/${tag}/
     buffer:
       timekey: 60m
       timekey_wait: 30s
