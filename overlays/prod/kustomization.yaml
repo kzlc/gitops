@@ -17,7 +17,7 @@ resources:
 images:
 - name: adhp/zdv-frontend
   newName: adhp/frontend
-  newTag: zdv-v1.3.6-353926a
+  newTag: zdv-v1.3.7-9aec49b
 - name: denartcc/api
   newName: adhp/api
   newTag: main-508c5f7
