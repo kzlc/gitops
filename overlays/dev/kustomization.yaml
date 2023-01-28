@@ -8,7 +8,7 @@ images:
   newTag: zdv-main-5966836
 - name: denartcc/api
   newName: adhp/api
-  newTag: dev-74142c5
+  newTag: dev-16ba068
 patchesStrategicMerge:
 - api/merge/certificate.yaml
 - api/merge/ingress.yaml
