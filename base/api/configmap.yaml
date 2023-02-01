@@ -94,6 +94,10 @@ items:
         facility: "ZDV"
         api_key: "{{.VATUSA_API_KEY | default "zdv"}}"
         test_mode: {{.VATUSA_TEST_MODE | default false }}
+      metrics:
+        enabled: true
+        port: 8080
+        path: /metrics
   kind: ConfigMap
   metadata:
     name: api-config
