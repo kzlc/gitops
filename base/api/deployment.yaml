@@ -52,7 +52,7 @@ spec:
         readinessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
+            path: /ping
             port: 3000
             scheme: HTTP
           initialDelaySeconds: 10
@@ -62,7 +62,7 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-            path: /
+            path: /ping
             port: 3000
             scheme: HTTP
           initialDelaySeconds: 10
