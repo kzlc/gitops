@@ -83,7 +83,7 @@ spec:
                   olderThan=`date --date "90 days ago" +%s`
                   if [[ $createDate -lt $olderThan ]]; then
                     filename=`echo $line|awk {'print $2'}`
-                    aws s3 --endpoint=https://${AWS_ENDPOINT} rm --recursive s3://${AWS_BUCKET}/logs/$filename/
+                    aws s3 --endpoint=https://${AWS_ENDPOINT} rm --recursive s3://${AWS_BUCKET}/logs/$filename
                   fi
               done
             env:
