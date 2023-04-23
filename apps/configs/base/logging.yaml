@@ -78,14 +78,12 @@ spec:
               EOF
               set -x
               aws s3 --endpoint=https://${AWS_ENDPOINT} ls s3://${AWS_BUCKET}/logs/ | while read -r line; do
-                  createDate=`echo $line|awk {'print $1" "$2'}`
+                  createDate=`echo $line|awk {'print $2'}|tr -d "/"`
                   createDate=`date -d"$createDate" +%s`
                   olderThan=`date --date "90 days ago" +%s`
                   if [[ $createDate -lt $olderThan ]]; then
-                      filename=`echo $line|awk {'print $4'}`
-                      if [[ ! -z "$filename" ]]; then
-                          aws s3 --endpoint=https://${AWS_ENDPOINT} rm s3://${AWS_BUCKET}/logs/$filename
-                      fi
+                    filename=`echo $line|awk {'print $2'}`
+                    aws s3 --endpoint=https://${AWS_ENDPOINT} rm --recursive s3://${AWS_BUCKET}/logs/$filename/
                   fi
               done
             env:
