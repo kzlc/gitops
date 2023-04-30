@@ -15,9 +15,12 @@ spec:
             - secretRef:
                 name: api-secrets
                 optional: false
+            env:
+            - name: STATES
+              value: "ALL"
             image: adhp/chart-parser:latest
             imagePullPolicy: Always
-            name: backup
+            name: chart-parser
             terminationMessagePath: /dev/termination-log
             terminationMessagePolicy: File
           dnsPolicy: ClusterFirst
