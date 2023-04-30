@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: chart-parser
+  namespace: zdv
+spec:
+  concurrencyPolicy: Allow
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - envFrom:
+            - secretRef:
+                name: api-secrets
+                optional: false
+            image: adhp/chart-parser:latest
+            imagePullPolicy: Always
+            name: backup
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+          dnsPolicy: ClusterFirst
+          restartPolicy: OnFailure
+          schedulerName: default-scheduler
+          terminationGracePeriodSeconds: 30
+  schedule: 1 9 * * *
+  successfulJobsHistoryLimit: 3
+  suspend: false
