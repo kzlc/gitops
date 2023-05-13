@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: email-templates
+data:
+  inactive_warning: |
+    Subject: You are about to be inactive
+    BCC:
+    - seniorstaff@denartcc.org
+    Body: |
+      Dear {{.FirstName}} {{.LastName}},
+
+      This is a warning that you have not yet controlled the minimum number of hours during the activity as
+      required by the Denver ARTCC Facility Administrative Policy.  Per the policy, controllers must control 
+      no less than 2 hours per 2 month period.
+
+      If, one the first of the month, this requirement is not met, you will be marked inactive and are subject to
+      removal from the roster. If you are unable to meet this requirement, please contact the Senior Staff to request
+      a leave of absense. They may be contacted by emailing seniorstaff@denartcc.org.
+
+      Thanks,
+      {{ range $atm := findRole "atm" }}
+      {{ $staff }}<br>
+      {{ end }}
+      {{ range $datm := findRole "datm" }}
+      {{ $datm }}<br>
+      {{ end }}
+      Denver ARTCC, VATUSA
+      https://www.denartcc.org
+  inactive: |
+    Subject: You are inactive
+    BCC:
+    - seniorstaff@denartcc.org
+    Body: |
+      Dear {{.FirstName}} {{.LastName}},
+
+      This is an email notification to inform you that you have not met the minimum activity requirements as set forth
+      by the Denver ARTCC Facility Administrative Policy.  Per the policy, controllers must control no less than 2
+      hours per 2 month period. You have been marked inactive on the roster and are subject to removal for Inactivity.
+
+      If you require a Leave of Absense, please contact the Senior Staff as soon as possible. They may be contacted by
+      emailing seniorstaff@denartcc.org.
+
+      Thanks,
+      {{ range $atm := findRole "atm" }}
+      {{ $staff }}<br>
+      {{ end }}
+      {{ range $datm := findRole "datm" }}
+      {{ $datm }}<br>
+      {{ end }}
+      Denver ARTCC, VATUSA
+      https://www.denartcc.org
+  visiting_rejected: |
+    Subject: Your visiting controller request has been rejected
+    BCC:
+    - seniorstaff@denartcc.org
+    Body: |
+      Dear {{.FirstName}} {{.LastName}},
+
+      This email is to notify you that your request to join the Denver ARTCC Visiting Controller Roster has been
+      rejected. If you feel this was done in error, please reach out to the Denver ARTCC Senior Staff by emailing
+      seniorstaff@denartcc.org.
+
+      The general reason applications are rejected are due to you not meeting the minimum requirements as listed on the
+      website.
+
+      Regards,
+      {{ range $atm := findRole "atm" }}
+      {{ $staff }}
+      {{ end }}
+      {{ range $datm := findRole "datm" }}
+      {{ $datm }}
+      {{ end }}
+      Denver ARTCC, VATUSA
+      https://www.denartcc.org
+  visiting_added: |
+    Subject: You have been added to the visiting controller roster
+    BCC:
+    - seniorstaff@denartcc.org
+    Body: |
+      Dear {{.FirstName}} {{.LastName}},
+
+      This email is to notify you that you have been added to the Denver ARTCC Visiting Controller Roster.
+      We are excited to have you join us and look forward to seeing you on the scopes.
+
+      To begin, please join the Denver ARTCC Discord if you have not already. You may join it and link your account through
+      our Discord Portal, accessible at https://discord.denartcc.org.
+
+      Next, please review the Denver ARTCC Policies by visiting our website at https://www.denartcc.org.
+
+      We look forward to controlling with you and hope to see you soon!
+      {{ range $atm := findRole "atm" }}
+      {{ $staff }}
+      {{ end }}
+      {{ range $datm := findRole "datm" }}
+      {{ $datm }}
+      {{ end }}
+      Denver ARTCC, VATUSA
+      https://www.denartcc.org
+  visiting_removed: |
+    Subject: You have been removed from the visiting controller roster
+    BCC:
+    - seniorstaff@denartcc.org
+    Body: |
+      Dear {{.FirstName}} {{.LastName}}
+
+      This is notification that you have been removed from the Denver ARTCC Visiting Controller Roster. If you feel this
+      was done in error, please reach out to the Denver ARTCC Senior Staff by emailing seniorstaff@denartcc.org.
+
+      Regards,
+      {{ range $atm := findRole "atm" }}
+      {{ $staff }}
+      {{ end }}
+      {{ range $datm := findRole "datm" }}
+      {{ $datm }}
+      {{ end }}
+      Denver ARTCC, VATUSA
+      https://www.denartcc.org

@@ -77,6 +77,8 @@ spec:
         volumeMounts:
         - name: config
           mountPath: /etc/zdv-api
+        - name: email-templates
+          mountPath: /app/templates
         resources:
           requests:
             cpu: 20m
@@ -90,3 +92,6 @@ spec:
       - name: config-map
         configMap:
           name: api-config
+      - name: email-templates
+        configMap:
+          name: email-templates
