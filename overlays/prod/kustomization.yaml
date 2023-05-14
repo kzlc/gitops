@@ -13,7 +13,6 @@ resources:
 - discord/service.yaml
 - mysql-backup/cronjob.yaml
 - bot/deployment.yaml
-- roster-sync/cronjob.yaml
 - chart-parser/cronjob.yaml
 images:
 - name: adhp/zdv-frontend
