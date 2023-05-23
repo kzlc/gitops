@@ -46,9 +46,9 @@ items:
         visiting:
           discord_webhook_name: "visitor"
           rating_min: S1
-          send_welcome: false
-          send_removal: false
-          send_rejected: false
+          send_welcome: true
+          send_removal: true
+          send_rejected: true
         stats:
           enabled: true
           discord_broadcast: true
