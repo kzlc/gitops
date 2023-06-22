@@ -15,7 +15,18 @@ spec:
               number: 80
         path: /
         pathType: Prefix
+  - host: discord.zdvartcc.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: discord
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
   tls:
   - hosts:
     - discord.denartcc.org
+    - discord.zdvartcc.org
     secretName: tls-discord-denartcc-org
