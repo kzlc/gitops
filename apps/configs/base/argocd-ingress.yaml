@@ -21,7 +21,18 @@ spec:
             name: argocd-server
             port:
               name: https
+  - host: argo.cd.zdvartcc.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port:
+              name: https
   tls:
   - hosts:
     - argo.cd.denartcc.org
+    - argo.cd.zdvartcc.org
     secretName: argocd-secret
