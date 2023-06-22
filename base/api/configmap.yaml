@@ -76,25 +76,25 @@ items:
           name: "{{.SESSION_NAME | default "zdv_session"}}"
           key: "{{.SESSION_KEY | default "zdv_session"}}"
           max_age: 604800
-          domain: "{{.SESSION_DOMAIN | default ".denartcc.org"}}"
+          domain: "{{.SESSION_DOMAIN | default ".zdvartcc.org"}}"
           path: "/"
           same_site: "none"
       storage:
-        base_url: {{.STORAGE_BASE_URL | default "https://cdn.denartcc.org" }}
+        base_url: {{.STORAGE_BASE_URL | default "https://cdn.zdvartcc.org" }}
         access_key: {{.STORAGE_ACCESS_KEY | default "12345"}}
         secret_key: {{.STORAGE_SECRET_KEY | default "12345"}}
         bucket: {{.STORAGE_BUCKET | default "denartcc"}}
         region: {{.STORAGE_REGION | default "us-east-1"}}
         endpoint: {{.STORAGE_ENDPOINT | default ""}}
       oauth:
-        base_URL: "https://auth.denartcc.org"
+        base_URL: "https://auth.zdvartcc.org"
         endpoints:
           token: "/oauth/token"
           user: "/v1/info"
           authorize: "/oauth/authorize"
         client_id: "{{.OAUTH_CLIENT_ID | default "zdv"}}"
         client_secret: "{{.OAUTH_CLIENT_SECRET | default "zdv"}}"
-        my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.vzanartcc.net" }}"
+        my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.zdvartcc.net" }}"
       vatusa:
         facility: "ZDV"
         api_key: "{{.VATUSA_API_KEY | default "zdv"}}"
