@@ -15,7 +15,18 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
+  - host: auth.zdvartcc.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: auth
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
   tls:
   - hosts:
     - auth.denartcc.org
+    - auth.zdvartcc.org
     secretName: tls-auth-denartcc-org
