@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - auth.denartcc.org
+  - auth.zdvartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
