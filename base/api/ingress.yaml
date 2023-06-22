@@ -17,7 +17,18 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
+  - host: api.zdvartcc.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: api-service
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
   tls:
   - hosts:
     - api.denartcc.org
+    - api.zdvartcc.org
     secretName: api-denartcc-org-tls
