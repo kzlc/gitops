@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - discord.denartcc.org
+  - discord.zdvartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
