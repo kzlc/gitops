@@ -19,6 +19,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - api.denartcc.org
     - api.zdvartcc.org
     secretName: api-denartcc-org-tls
