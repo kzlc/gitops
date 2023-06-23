@@ -5,6 +5,7 @@ metadata:
 spec:
   dnsNames:
   - api.denartcc.org
+  - api.zdvartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt

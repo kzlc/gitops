@@ -5,3 +5,4 @@ metadata:
 spec:
   dnsNames:
   - www.dev.denartcc.org
+  - www.dev.zdvartcc.org
