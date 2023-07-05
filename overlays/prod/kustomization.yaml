@@ -23,7 +23,7 @@ images:
   newTag: main-5bedc84
 - name: denartcc/bot
   newName: adhp/bot
-  newTag: main-3ac612f
+  newTag: main-71ecfc3
 - name: vzanartcc/auth
   newName: adhp/auth
   newTag: 72032a6
