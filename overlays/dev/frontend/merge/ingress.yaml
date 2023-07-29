@@ -17,16 +17,6 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: www.dev.zlcartcc.org
-    http:
-      paths:
-      - backend:
-          service:
-            name: frontend-service
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
   tls:
   - hosts:
     - www.dev.zlcartcc.org
