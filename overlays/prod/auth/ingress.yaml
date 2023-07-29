@@ -15,16 +15,6 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
-  - host: auth.zlcartcc.org
-    http:
-      paths:
-      - backend:
-          service:
-            name: auth
-            port:
-              number: 3000
-        path: /
-        pathType: Prefix
   tls:
   - hosts:
     - auth.zlcartcc.org
