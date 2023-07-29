@@ -15,16 +15,6 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: discord.zlcartcc.org
-    http:
-      paths:
-      - backend:
-          service:
-            name: discord
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
   tls:
   - hosts:
     - discord.zlcartcc.org
