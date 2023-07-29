@@ -10,7 +10,7 @@ data:
     p, role:org-admin, logs, get, *, allow
     p, role:org-admin, exec, create, */*, allow
 
-    g, kzdv:admin, role:org-admin
+    g, kzlc:admin, role:org-admin
 kind: ConfigMap
 metadata:
   labels:

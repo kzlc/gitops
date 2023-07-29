@@ -15,15 +15,15 @@ resources:
 - bot/deployment.yaml
 - chart-parser/cronjob.yaml
 images:
-- name: adhp/zdv-frontend
+- name: adhp/zlc-frontend
   newName: adhp/frontend
   newTag: zdv-v1.6.1687495601.29-8f5fb17
-- name: denartcc/api
+- name: zlcartcc/api
   newName: adhp/api
   newTag: main-5bedc84
-- name: denartcc/bot
+- name: zlcartcc/bot
   newName: adhp/bot
   newTag: main-89bb762
-- name: vzanartcc/auth
+- name: zlcartcc/auth
   newName: adhp/auth
   newTag: 72032a6

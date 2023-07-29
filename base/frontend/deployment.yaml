@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: adhp/zdv-frontend:dev-ac8ef4b
+        image: adhp/zlc-frontend:dev-ac8ef4b
         imagePullPolicy: Always
         ports:
         - containerPort: 80

@@ -15,7 +15,7 @@ spec:
     spec:
       initContainers:
       - name: config
-        image: denartcc/api:fe44c92
+        image: zlcartcc/api:fe44c92
         imagePullPolicy: Always
         env:
         - name: CONFIGMAP_PATH
@@ -25,7 +25,7 @@ spec:
         - name: ENV_PATH
           value: /app
         - name: CONFIG
-          value: /etc/zdv-api/config.yaml
+          value: /etc/zlc-api/config.yaml
         envFrom:
         - secretRef:
             name: api-secrets
@@ -37,15 +37,15 @@ spec:
         - -c
         - |-
           /bin/bash /app/init.sh
-          cat /etc/zdv-api/config.yaml
+          cat /etc/zlc-api/config.yaml
         volumeMounts:
         - name: config
-          mountPath: /etc/zdv-api
+          mountPath: /etc/zlc-api
         - name: config-map
           mountPath: /tmp/config-map
       containers:
       - name: api
-        image: denartcc/api:fe44c92
+        image: zlcartcc/api:fe44c92
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
@@ -74,10 +74,10 @@ spec:
         args:
           - server
           - --config
-          - /etc/zdv-api/config.yaml
+          - /etc/zlc-api/config.yaml
         volumeMounts:
         - name: config
-          mountPath: /etc/zdv-api
+          mountPath: /etc/zlc-api
         - name: email-templates
           mountPath: /app/templates
         resources:

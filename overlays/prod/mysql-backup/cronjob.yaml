@@ -31,7 +31,7 @@ spec:
               bktime=$(date +%Y-%m-%d-%H-%M-%S)
               mkdir /tmp/backups
               pushd /tmp/backups
-              databases=(zdv zdvdev)
+              databases=(zlc zlcdev)
               for db in "${databases[@]}"; do
                   mysqldump -h "$MYSQL_HOST" -u "$MYSQL_USER" "$db" > "$db.sql"
               done
@@ -52,7 +52,7 @@ spec:
             - secretRef:
                 name: mysql-backup-credentials
                 optional: false
-            image: denartcc/cli:v1.1.2-1
+            image: zlcartcc/cli:v1.1.2-1
             imagePullPolicy: Always
             name: backup
             terminationMessagePath: /dev/termination-log

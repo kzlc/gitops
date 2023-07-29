@@ -7,7 +7,7 @@ spec:
   fluentd: {}
   fluentbit: {}
   controlNamespace: logging
-  watchNamespaces: ['zdv','ingress-nginx']
+  watchNamespaces: ['zlc','ingress-nginx']
 ---
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterOutput
@@ -26,7 +26,7 @@ spec:
         secretKeyRef:
           name: logging-s3
           key: awsSecretAccessKey
-    s3_bucket: kzdv-backups
+    s3_bucket: kzlc-backups
     s3_endpoint: https://sfo3.digitaloceanspaces.com
     s3_region: us-east-1
     path: logs/%Y-%m-%d/${tag}/
@@ -100,8 +100,8 @@ spec:
             - name: AWS_ENDPOINT
               value: sfo3.digitaloceanspaces.com
             - name: AWS_BUCKET
-              value: kzdv-backups
-            image: denartcc/cli:v1.1.2-1
+              value: kzlc-backups
+            image: zlcartcc/cli:v1.1.2-1
             imagePullPolicy: Always
             name: backup
             terminationMessagePath: /dev/termination-log

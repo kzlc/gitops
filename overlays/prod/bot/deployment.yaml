@@ -4,7 +4,7 @@ metadata:
   labels:
     app: bot
   name: bot
-  namespace: zdv
+  namespace: zlc
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -29,7 +29,7 @@ spec:
             secretKeyRef:
               key: bot-config
               name: bot-secrets
-        image: denartcc/bot:main
+        image: zlcartcc/bot:main
         imagePullPolicy: Always
         name: bot
         resources:

@@ -1,7 +1,7 @@
 mysql:
   auth:
-    username: zdv
-    database: zdv
+    username: zlc
+    database: zlc
     existingSecret: passwords
   primary:
     resources:

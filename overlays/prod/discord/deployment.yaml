@@ -4,7 +4,7 @@ metadata:
   labels:
     app: discord
   name: discord
-  namespace: zdv
+  namespace: zlc
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -23,7 +23,7 @@ spec:
         app: discord
     spec:
       containers:
-      - image: adhp/discord:zdv
+      - image: adhp/discord:zlc
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3

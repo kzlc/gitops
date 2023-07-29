@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: www.denartcc.org
+  - host: www.zlcartcc.org
     http:
       paths:
       - backend:
@@ -17,7 +17,7 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: denartcc.org
+  - host: zlcartcc.org
     http:
       paths:
       - backend:
@@ -27,7 +27,7 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: new.denartcc.org
+  - host: new.zlcartcc.org
     http:
       paths:
       - backend:
@@ -37,7 +37,7 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: www.zdvartcc.org
+  - host: www.zlcartcc.org
     http:
       paths:
       - backend:
@@ -47,7 +47,7 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: zdvartcc.org
+  - host: zlcartcc.org
     http:
       paths:
       - backend:
@@ -57,7 +57,7 @@ spec:
               number: 80
         path: /
         pathType: Prefix
-  - host: new.zdvartcc.org
+  - host: new.zlcartcc.org
     http:
       paths:
       - backend:
@@ -69,6 +69,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - www.denartcc.org
-    - www.zdvartcc.org
-    secretName: www-denartcc-org-tls
+    - www.zlcartcc.org
+    secretName: www-zlcartcc-org-tls

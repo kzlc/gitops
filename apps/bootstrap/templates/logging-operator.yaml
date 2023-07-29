@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: apps/logging-operator
-    repoURL: https://github.com/kzdv/gitops
+    repoURL: https://github.com/kzlc/gitops
     targetRevision: HEAD
   syncPolicy:
     automated:

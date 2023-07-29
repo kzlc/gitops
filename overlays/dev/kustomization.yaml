@@ -3,10 +3,10 @@ kind: Kustomization
 resources:
 - ../../base
 images:
-- name: adhp/zdv-frontend
+- name: adhp/zlc-frontend
   newName: adhp/frontend
-  newTag: zdv-main-60e89c8
-- name: denartcc/api
+  newTag: zlc-main-60e89c8
+- name: zlcartcc/api
   newName: adhp/api
   newTag: dev-a95327e
 patchesStrategicMerge:

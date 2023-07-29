@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: auth.denartcc.org
+  - host: auth.zlcartcc.org
     http:
       paths:
       - backend:
@@ -15,7 +15,7 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
-  - host: auth.zdvartcc.org
+  - host: auth.zlcartcc.org
     http:
       paths:
       - backend:
@@ -27,6 +27,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - auth.denartcc.org
-    - auth.zdvartcc.org
-    secretName: tls-auth-denartcc-org
+    - auth.zlcartcc.org
+    secretName: tls-auth-zlcartcc-org
