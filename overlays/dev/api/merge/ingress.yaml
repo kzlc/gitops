@@ -17,16 +17,6 @@ spec:
               number: 3000
         path: /
         pathType: Prefix
-  - host: api.dev.zdvartcc.org
-    http:
-      paths:
-      - backend:
-          service:
-            name: api-service
-            port:
-              number: 3000
-        path: /
-        pathType: Prefix
   tls:
   - hosts:
     - api.dev.zdvartcc.org
