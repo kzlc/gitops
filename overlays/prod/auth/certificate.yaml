@@ -4,7 +4,6 @@ metadata:
   name: auth-denartcc-org-tls
 spec:
   dnsNames:
-  - auth.denartcc.org
   - auth.zdvartcc.org
   issuerRef:
     kind: ClusterIssuer
