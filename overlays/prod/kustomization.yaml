@@ -17,13 +17,13 @@ resources:
 images:
 - name: adhp/zlc-frontend
   newName: adhp/frontend
-  newTag: zdv-v1.6.1687495601.29-8f5fb17
+  newTag: zlc-v1.7.1690865841.30-6e2cf3b
 - name: zlcartcc/api
   newName: adhp/api
   newTag: main-5bedc84
-- name: zlcartcc/bot
-  newName: adhp/bot
-  newTag: main-89bb762
 - name: zlcartcc/auth
   newName: adhp/auth
   newTag: 72032a6
+- name: zlcartcc/bot
+  newName: adhp/bot
+  newTag: main-89bb762
