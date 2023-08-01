@@ -8,7 +8,7 @@ items:
     name: agent-plan
     namespace: system-upgrade
   spec:
-    channel: https://update.k3s.io/v1-release/channels/v1.25
+    channel: https://update.k3s.io/v1-release/channels/v1.27
     concurrency: 1
     cordon: true
     nodeSelector:
@@ -29,7 +29,7 @@ items:
     name: server-plan
     namespace: system-upgrade
   spec:
-    channel: https://update.k3s.io/v1-release/channels/v1.25
+    channel: https://update.k3s.io/v1-release/channels/v1.27
     concurrency: 1
     cordon: true
     nodeSelector:
