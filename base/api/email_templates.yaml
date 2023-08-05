@@ -57,7 +57,7 @@ data:
     Body: |
       Dear {{.FirstName}} {{.LastName}},
 
-      <p>This email is to notify you that your request to join the Salt Lakt City ARTCC Visiting Controller Roster has been
+      <p>This email is to notify you that your request to join the Salt Lake City ARTCC Visiting Controller Roster has been
       rejected. If you feel this was done in error, please reach out to the Salt Lake City ARTCC Senior Staff by emailing
       seniorstaff@zlcartcc.org.</p>
 
