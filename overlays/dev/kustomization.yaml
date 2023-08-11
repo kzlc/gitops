@@ -5,7 +5,7 @@ resources:
 images:
 - name: adhp/zdv-frontend
   newName: adhp/frontend
-  newTag: zdv-main-12add07
+  newTag: zdv-main-4a0092e
 - name: denartcc/api
   newName: adhp/api
   newTag: dev-4111ce9
