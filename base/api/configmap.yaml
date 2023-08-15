@@ -103,6 +103,8 @@ items:
         enabled: true
         port: 8080
         path: /metrics
+      features:
+        staffing_request: true
   kind: ConfigMap
   metadata:
     name: api-config
