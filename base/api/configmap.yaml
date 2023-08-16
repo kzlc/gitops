@@ -21,6 +21,7 @@ items:
           uploads: {{.DISCORD_WEBHOOK_UPLOADS}}
           role: {{.DISCORD_WEBHOOK_ROLE}}
           visiting_application: {{.DISCORD_WEBHOOK_VISITING_APPLICATION}}
+          staffing_request: {{.DISCORD_WEBHOOK_EVENTS}}
           seniorstaff: {{.DISCORD_WEBHOOK_SENIORSTAFF}}
           online: {{.DISCORD_WEBHOOK_ONLINE}}
           default: {{.DISCORD_WEBHOOK_DEFAULT}}
