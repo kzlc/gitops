@@ -23,6 +23,7 @@ items:
           visiting_application: {{.DISCORD_WEBHOOK_VISITING_APPLICATION}}
           seniorstaff: {{.DISCORD_WEBHOOK_SENIORSTAFF}}
           online: {{.DISCORD_WEBHOOK_ONLINE}}
+          staffing_request: {{.DISCORD_WEBHOOK_EVENTS}}
           default: {{.DISCORD_WEBHOOK_DEFAULT}}
         client_id: {{.DISCORD_CLIENT_ID}}
         client_secret: {{.DISCORD_CLIENT_SECRET}}
