@@ -52,7 +52,7 @@ spec:
             - secretRef:
                 name: mysql-backup-credentials
                 optional: false
-            image: zlcartcc/cli:v1.1.2-1
+            image: denartcc/cli:v1.1.2-1
             imagePullPolicy: Always
             name: backup
             terminationMessagePath: /dev/termination-log
