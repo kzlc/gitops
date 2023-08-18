@@ -72,6 +72,14 @@ items:
           - PUB
           - RAP
           - RCA
+        training_requests:
+          enabled: true
+          discord:
+            training_staff: ""
+            scheduled: ""
+            show_all_scheduled: false
+          positions: []
+          max_requests_per_user: 2
       session:
         cookie:
           name: "{{.SESSION_NAME | default "zdv_session"}}"
