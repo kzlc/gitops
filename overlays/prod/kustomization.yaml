@@ -12,7 +12,6 @@ resources:
 - discord/ingress.yaml
 - discord/service.yaml
 - mysql-backup/cronjob.yaml
-- bot/deployment.yaml
 - chart-parser/cronjob.yaml
 images:
 - name: adhp/zlc-frontend
