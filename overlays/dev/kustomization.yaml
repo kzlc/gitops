@@ -8,7 +8,7 @@ images:
   newTag: zlc-main-1f851ff
 - name: zlcartcc/api
   newName: adhp/api
-  newTag: dev-f077dc0
+  newTag: dev-6d74aef
 patchesStrategicMerge:
 - api/merge/certificate.yaml
 - api/merge/ingress.yaml
