@@ -6,6 +6,9 @@ images:
 - name: adhp/zlc-frontend
   newName: adhp/frontend
   newTag: zlc-main-3ab346a
+- name: denartcc/api
+  newName: adhp/api
+  newTag: dev-1485402
 - name: zlcartcc/api
   newName: adhp/api
   newTag: dev-57fc47b
