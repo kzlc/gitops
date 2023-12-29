@@ -94,8 +94,6 @@ data:
 
       <p>Next, please review the Denver ARTCC Policies by visiting our website at https://zdvartcc.org.</p>
 
-      <p>Lastly, when you are ready, please visit https://www.picktime.com/vzdv to begin scheduling your visitor checkout.</p>
-
       <p>We look forward to controlling with you and hope to see you soon!<br>
       {{- range $atm := findRole "atm"  -}}
       {{ $atm }}<br>
