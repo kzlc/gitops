@@ -83,10 +83,10 @@ spec:
         resources:
           requests:
             cpu: 20m
-            memory: 50Mi
+            memory: 25Mi
           limits:
             cpu: 100m
-            memory: 512Mi
+            memory: 125Mi
       volumes:
       - name: config
         emptyDir: {}
