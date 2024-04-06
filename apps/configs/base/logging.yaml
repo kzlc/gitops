@@ -101,7 +101,7 @@ spec:
               value: sfo3.digitaloceanspaces.com
             - name: AWS_BUCKET
               value: kzlc-backups
-            image: zlcartcc/cli:v1.1.2-1
+            image: denartcc/cli:v1.1.2-1
             imagePullPolicy: Always
             name: backup
             terminationMessagePath: /dev/termination-log
