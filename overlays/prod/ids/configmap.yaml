@@ -23,7 +23,7 @@ data:
       password: {{.DB_PASSWORD | default "root"}}
       database_name: idsv2 # database name
       auto_migrate: true # auto migrate database on startup
-      ca_cert: {{.DB_CA_CERT | default ""}}
+      CACert: {{.DB_CA_CERT | default ""}}
 
     facility:
       identifier: ZLC # FAA Facility Identifier
