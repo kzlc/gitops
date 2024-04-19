@@ -2,11 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ids
-  namespace: zan
+  namespace: zlc
 spec:
   ingressClassName: nginx
   rules:
-  - host: ids.zanartcc.org
+  - host: ids.zlcartcc.org
     http:
       paths:
       - backend:
@@ -33,4 +33,4 @@ spec:
   tls:
   - hosts:
     - ids.zanartcc.org
-    secretName: tls-ids-zanartcc-org
+    secretName: tls-ids-zlcartcc-org
