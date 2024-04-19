@@ -17,13 +17,13 @@ data:
 
     database:
       driver: mysql # supports mysql and postgres
-      host: "" # database host
-      port: 0 # database port
-      username: "" # database username
-      password: "" # database password
+      host: {{.DB_HOST | default "mysql.mysql.svc.cluster.local"}}
+      port: {{.DB_PORT | default "3306"}}
+      username: {{.DB_USER | default "root"}}
+      password: {{.DB_PASSWORD | default "root"}}
       database_name: idsv2 # database name
       auto_migrate: true # auto migrate database on startup
-      CACert: "" # path to CA certificate for TLS connection
+      CACert: {{.DB_CA_CERT | default ""}}
 
     facility:
       identifier: ZLC # FAA Facility Identifier
@@ -35,9 +35,9 @@ data:
     oauth:
       Provider: adh # OAuth Provider, supports adh or vatsim
       base_url: https://auth.zlcartcc.org # Base URL for OAuth Provider
-      client_id: ids # OAuth Client ID
-      client_secret: ids # OAuth Client Secret
-      my_base_url: http://ids-api.hawton.haus:3000 # Base URL for this application
+      client_id: "{{.OAUTH_CLIENT_ID | default "zlc"}}"
+      client_secret: "{{.OAUTH_CLIENT_SECRET | default "zlc"}}"
+      my_base_URL: "{{.OAUTH_MY_BASE_URL | default "https://api.dev.zlcartcc.net" }}" # Base URL for this application
       endpoints: # OAuth Endpoints
         authorize: /oauth/authorize # OAuth Authorize
         token: /oauth/token # OAuth Token
@@ -50,11 +50,11 @@ data:
       # for https, expects SSL_CERT and SSL_KEY env vars to be set
 
     session:
-      hash_key: "" # Session Hash Key
-      block_key: "" # Session Block Key
-      name: ids # Session Name
-      domain: .zlcartcc.org # Session Domain
-      path: / # Session Path
+      hash_key: "{{.SESSION_KEY | default "zlc_session"}}"
+      block_key: "{{.SESSION_KEY | default "zlc_session"}}"
+      name: "{{.SESSION_NAME | default "zlc_session"}}"
+      domain: "{{.SESSION_DOMAIN | default ".zlcartcc.org"}}"
+      path: "/"
       max_age: 86400 # Session Max Age, in seconds
       secure: false # Session Secure
       http_only: true # Session HTTP Only
