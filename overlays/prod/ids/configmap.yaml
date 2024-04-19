@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ids-config
-  namespace: zan
+  namespace: zlc
 data:
   config.yaml: |
     cache:
@@ -26,15 +26,15 @@ data:
       CACert: "" # path to CA certificate for TLS connection
 
     facility:
-      identifier: ZAN # FAA Facility Identifier
-      name: Anchorage ARTCC # Facility Name
+      identifier: ZLC # FAA Facility Identifier
+      name: Salt Lake City ARTCC # Facility Name
       adh: # ADH Partnership configuration
-        api_base: https://api.zanartcc.org # Base URL for ADH API
+        api_base: https://api.zlcartcc.org # Base URL for ADH API
         rostered: true # Allow only rostered controllers
 
     oauth:
       Provider: adh # OAuth Provider, supports adh or vatsim
-      base_url: https://auth.zanartcc.org # Base URL for OAuth Provider
+      base_url: https://auth.zlcartcc.org # Base URL for OAuth Provider
       client_id: ids # OAuth Client ID
       client_secret: ids # OAuth Client Secret
       my_base_url: http://ids-api.hawton.haus:3000 # Base URL for this application
@@ -53,119 +53,21 @@ data:
       hash_key: "" # Session Hash Key
       block_key: "" # Session Block Key
       name: ids # Session Name
-      domain: .zanartcc.org # Session Domain
+      domain: .zlcartcc.org # Session Domain
       path: / # Session Path
       max_age: 86400 # Session Max Age, in seconds
       secure: false # Session Secure
       http_only: true # Session HTTP Only
   airports.json: |
     [
-      "AKW",
-      "HYG",
-      "KTN",
-      "WRG",
-      "PSG",
-      "AFE",
-      "SIT",
-      "AGN",
-      "JNU",
-      "HNH",
-      "GST",
-      "ELV",
-      "HNS",
-      "SGY",
-      "YAK",
-      "CDV",
-      "VDZ",
-      "GKN",
-      "ORT",
-      "BIG",
-      "EAA",
-      "EIL",
-      "FAI",
-      "FYU",
-      "ARC",
-      "BTI",
-      "SCC",
-      "AQT",
-      "ATK",
-      "BRW",
-      "AWI",
-      "PIZ",
-      "AKP",
-      "BTT",
-      "AFM",
-      "IAN",
-      "OTZ",
-      "D76",
-      "WLK",
-      "SHH",
-      "TNC",
-      "TER",
-      "OME",
-      "WMO",
-      "GLV",
-      "ELI",
-      "2C7",
-      "GAL",
-      "HLA",
-      "UTO",
-      "TAL",
-      "ENN",
-      "INR",
-      "TKA",
-      "PAQ",
-      "ANC",
-      "SWD",
-      "SOV",
-      "HOM",
-      "ENA",
-      "MHM",
-      "UNK",
-      "FSP",
-      "MCG",
-      "SHX",
-      "ANV",
-      "KSM",
-      "SMK",
-      "CZF",
-      "VAK",
-      "MDM",
-      "RSH",
-      "KLG",
-      "ANI",
-      "SLQ",
-      "SVW",
-      "ILI",
-      "JZZ",
-      "BET",
-      "OOK",
-      "IIK",
-      "PTU",
-      "EHM",
-      "TOG",
-      "DLG",
-      "AKN",
-      "IGG",
-      "ADQ",
-      "AKK",
-      "PNP",
-      "PTH",
-      "OUL",
-      "SDP",
-      "KVC",
-      "CDB",
-      "KFP",
-      "DUT",
-      "ADK",
-      "SYA",
-      "PBV",
-      "SNP",
-      "SVA",
-      "WTK",
-      "DGG",
-      "MRI",
-      "LHD",
-      "FBK",
-      "EDF"
+      "SLC",
+      "PVU",
+      "PIH",
+      "MUO",
+      "BOI",
+      "BZN",
+      "BIL",
+      "HLN",
+      "HLN",
+      "LVM"
     ]
