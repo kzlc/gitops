@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: auth-zlcartcc-org-tls
+  name: ids.zlcartcc.org
 spec:
   dnsNames:
-  - auth.zlcartcc.org
+  - ids.zlcartcc.org
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  secretName: tls-auth-zlcartcc-org
+  secretName: tls-ids-zlcartcc-org
