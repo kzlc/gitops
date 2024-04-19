@@ -8,4 +8,4 @@ spec:
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  secretName: tls-ids-zlcartcc-org
+  secretName: tls-auth-zlcartcc-org
