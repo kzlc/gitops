@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: adhp/ids-backend:zan-main-267a56c
+        image: adhp/ids-backend:zlc-main-267a56c
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
