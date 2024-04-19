@@ -33,4 +33,4 @@ spec:
   tls:
   - hosts:
     - ids.zlcartcc.org
-    secretName: tls-ids-zlcartcc-org
+    secretName: ids-zlcartcc-org-tls
