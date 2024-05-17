@@ -20,9 +20,6 @@ images:
 - name: denartcc/api
   newName: adhp/api
   newTag: main-b2362c9
-- name: denartcc/bot
-  newName: adhp/bot
-  newTag: main-89bb762
 - name: vzanartcc/auth
   newName: adhp/auth
   newTag: 72032a6
