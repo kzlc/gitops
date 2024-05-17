@@ -11,7 +11,6 @@ resources:
 - discord/deployment.yaml
 - discord/ingress.yaml
 - discord/service.yaml
-- mysql-backup/cronjob.yaml
 - chart-parser/cronjob.yaml
 images:
 - name: adhp/zdv-frontend
