@@ -21,7 +21,7 @@ images:
   newTag: main-b2362c9
 - name: zlcartcc/api
   newName: adhp/api
-  newTag: main-8163c14
+  newTag: main-b2362c9
 - name: zlcartcc/auth
   newName: adhp/auth
   newTag: 72032a6
