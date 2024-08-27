@@ -5,7 +5,7 @@ resources:
 images:
 - name: adhp/zlc-frontend
   newName: adhp/frontend
-  newTag: zlc-main-fd8412e
+  newTag: zlc-main-d424825
 - name: denartcc/api
   newName: adhp/api
   newTag: dev-56f8c88
