@@ -8,7 +8,7 @@ images:
   newTag: zlc-main-9ce18b5
 - name: denartcc/api
   newName: adhp/api
-  newTag: dev-6ac2f8e
+  newTag: dev-0084bdf
 - name: zlcartcc/api
   newName: adhp/api
   newTag: dev-57fc47b
