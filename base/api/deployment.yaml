@@ -43,6 +43,13 @@ spec:
           mountPath: /etc/zlc-api
         - name: config-map
           mountPath: /tmp/config-map
+        resources:
+          requests:
+            cpu: 50m
+            memory: 50Mi
+          limits:
+            cpu: 250m
+            memory: 250Mi
       containers:
       - name: api
         image: zlcartcc/api:fe44c92
