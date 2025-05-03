@@ -18,7 +18,7 @@ images:
   newTag: zlc-v1.9.1740856900.83-115ffb6
 - name: denartcc/api
   newName: adhp/api
-  newTag: main-8714ede
+  newTag: main-1045fcd
 - name: zlcartcc/api
   newName: adhp/api
   newTag: main-b2362c9
