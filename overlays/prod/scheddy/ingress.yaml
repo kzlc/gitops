@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: training.zlcartcc.org
+  - host: scheddy.zlcartcc.org
     http:
       paths:
       - backend:
@@ -17,5 +17,5 @@ spec:
         pathType: Prefix
   tls:
   - hosts:
-    - training.zlcartcc.org
-    secretName: tls-training-zlcartcc-org
+    - scheddy.zlcartcc.org
+    secretName: tls-scheddy-zlcartcc-org
