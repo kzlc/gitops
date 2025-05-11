@@ -7,6 +7,10 @@ resources:
 - auth/deployment.yaml
 - auth/ingress.yaml
 - auth/service.yaml
+- scheddy/certificate.yaml
+- scheddy/deployment.yaml
+- scheddy/ingress.yaml
+- scheddy/service.yaml
 - discord/certificate.yaml
 - discord/deployment.yaml
 - discord/ingress.yaml

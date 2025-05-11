@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: training
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: training.zlcartcc.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: training
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - training.zlcartcc.org
+    secretName: tls-training-zlcartcc-org

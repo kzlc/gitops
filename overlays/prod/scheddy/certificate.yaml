@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: training-zlcartcc-org-tls
+spec:
+  dnsNames:
+  - training.zlcartcc.org
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt
+  secretName: tls-training-zlcartcc-org
